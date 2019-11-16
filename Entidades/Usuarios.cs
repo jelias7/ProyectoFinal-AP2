@@ -14,7 +14,7 @@ namespace Entidades
         public string Username { get; set; }
         public string Password { get; set; }
         public string Tipo_Usuario { get; set; }
-        public string EmpresaId { get; set; }
+        public int EmpresaId { get; set; }
         public DateTime Fecha { get; set; }
         public Usuarios()
         {

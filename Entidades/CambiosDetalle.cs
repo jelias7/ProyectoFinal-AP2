@@ -12,6 +12,7 @@ namespace Entidades
     {
         [Key]
         public int DetalleId { get; set; }
+        public int CajaId { get; set; }
         public string Divisa { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Cambio { get; set; }
@@ -19,6 +20,7 @@ namespace Entidades
         public CambiosDetalle()
         {
             DetalleId = 0;
+            CajaId = 0;
             Divisa = string.Empty;
             Cantidad = 0;
             Cambio = 0;

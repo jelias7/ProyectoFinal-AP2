@@ -10,14 +10,14 @@ namespace Entidades
     public class Divisas
     {
         [Key]
-        public int Id { get; set; }
+        public int DivisaId { get; set; }
         public string Descripcion { get; set; }
         public decimal Tasa_Compra { get; set; }
         public decimal Tasa_Venta { get; set; }
         public DateTime Fecha { get; set; }
         public Divisas()
         {
-            Id = 0;
+            DivisaId = 0;
             Descripcion = string.Empty;
             Tasa_Compra = 0;
             Tasa_Venta = 0;
