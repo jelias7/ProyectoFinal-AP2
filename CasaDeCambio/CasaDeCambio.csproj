@@ -92,6 +92,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultas\cCaja.aspx" />
+    <Content Include="Consultas\cCambios.aspx" />
     <Content Include="Consultas\cDivisas.aspx" />
     <Content Include="Consultas\cEmpresas.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
@@ -163,6 +165,20 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cCaja.aspx.cs">
+      <DependentUpon>cCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCaja.aspx.designer.cs">
+      <DependentUpon>cCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cCambios.aspx.cs">
+      <DependentUpon>cCambios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCambios.aspx.designer.cs">
+      <DependentUpon>cCambios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cDivisas.aspx.cs">
       <DependentUpon>cDivisas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
