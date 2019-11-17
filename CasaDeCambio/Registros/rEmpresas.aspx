@@ -42,6 +42,15 @@
                  </div>
 
                  </div>
+             <div class="col-md-5">
+                <asp:ValidationSummary runat="server" ID="SummaryValidation"
+                    ForeColor="red"
+                    DisplayMode="List"
+                    ShowSummary="true"
+                    EnableClientScript="True"
+                    Font-Bold="True"
+                    CssClass=" alert alert-light" />
+            </div>
             </div>
      <div class="panel-footer">
      <div class="text-center">

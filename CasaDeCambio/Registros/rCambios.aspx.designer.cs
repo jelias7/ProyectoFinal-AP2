@@ -10,7 +10,7 @@
 namespace CasaDeCambio.Registros {
     
     
-    public partial class rEmpresas {
+    public partial class rCambios {
         
         /// <summary>
         /// IDTextBox control.
@@ -49,58 +49,76 @@ namespace CasaDeCambio.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVFecha;
         
         /// <summary>
-        /// DescripcionTextBox control.
+        /// PersonaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DescripcionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox PersonaTextBox;
         
         /// <summary>
-        /// RFVDescripcion control.
+        /// RFVPersona control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDescripcion;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVPersona;
         
         /// <summary>
-        /// DireccionTextBox control.
+        /// DineroTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DireccionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox DineroTextBox;
         
         /// <summary>
-        /// RFVDireccion control.
+        /// RFVDinero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDireccion;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDinero;
         
         /// <summary>
-        /// TelefonoTextBox control.
+        /// DivisaDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TelefonoTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList DivisaDropDown;
         
         /// <summary>
-        /// RFVTelefono control.
+        /// AgregarGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVTelefono;
+        protected global::System.Web.UI.WebControls.LinkButton AgregarGrid;
+        
+        /// <summary>
+        /// Grid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Grid;
+        
+        /// <summary>
+        /// TotalCambiadoTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TotalCambiadoTextBox;
         
         /// <summary>
         /// SummaryValidation control.

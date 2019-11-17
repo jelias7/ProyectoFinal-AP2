@@ -103,6 +103,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Registros\rCaja.aspx" />
+    <Content Include="Registros\rCambios.aspx" />
     <Content Include="Registros\rDivisas.aspx" />
     <Content Include="Registros\rEmpresas.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="Registros\rCaja.aspx.designer.cs">
       <DependentUpon>rCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rCambios.aspx.cs">
+      <DependentUpon>rCambios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCambios.aspx.designer.cs">
+      <DependentUpon>rCambios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rDivisas.aspx.cs">
       <DependentUpon>rDivisas.aspx</DependentUpon>
