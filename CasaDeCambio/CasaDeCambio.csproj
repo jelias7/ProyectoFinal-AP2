@@ -104,6 +104,7 @@
     <Content Include="Global.asax" />
     <Content Include="Registros\rCaja.aspx" />
     <Content Include="Registros\rDivisas.aspx" />
+    <Content Include="Registros\rEmpresas.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -189,6 +190,13 @@
     </Compile>
     <Compile Include="Registros\rDivisas.aspx.designer.cs">
       <DependentUpon>rDivisas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rEmpresas.aspx.cs">
+      <DependentUpon>rEmpresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rEmpresas.aspx.designer.cs">
+      <DependentUpon>rEmpresas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rUsuarios.aspx.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
