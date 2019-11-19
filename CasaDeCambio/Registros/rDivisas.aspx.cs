@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BLL;
+using CasaDeCambio.Utilitarios;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +14,107 @@ namespace CasaDeCambio.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            }
+        }
+        private bool ExisteEnLaBaseDeDatos()
+        {
+            RepositorioBase<Divisas> Repositorio = new RepositorioBase<Divisas>();
+            Divisas ID = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
+            return (ID != null);
+        }
+        private Divisas LlenaClase()
+        {
+            Divisas Divisa = new Divisas();
 
+            Divisa.DivisaId = Utils.ToInt(IDTextBox.Text);
+            Divisa.Descripcion = DescripcionTextBox.Text;
+            Divisa.Tasa_Compra = Utils.ToDecimal(TasaCompraTextBox.Text);
+            Divisa.Tasa_Venta = Utils.ToDecimal(TasaVentaTextBox.Text);
+            Divisa.Fecha = Utils.ToDateTime(FechaTextBox.Text);
+
+            return Divisa;
+        }
+        private void LlenaCampo(Divisas Divisa)
+        {
+            IDTextBox.Text = Divisa.DivisaId.ToString();
+            DescripcionTextBox.Text = Divisa.Descripcion;
+            TasaCompraTextBox.Text = Divisa.Tasa_Compra.ToString();
+            TasaVentaTextBox.Text = Divisa.Tasa_Venta.ToString();
+            FechaTextBox.Text = Divisa.Fecha.ToString("yyyy-MM-dd");
+        }
+        protected void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Request.RawUrl);
+        }
+
+        protected void GuardarButton_Click(object sender, EventArgs e)
+        {
+            Divisas Div = new Divisas();
+            RepositorioBase<Divisas> Repositorio = new RepositorioBase<Divisas>();
+
+            bool paso = false;
+
+            Div = LlenaClase();
+
+            if (Utils.ToInt(IDTextBox.Text) == 0)
+            {
+                paso = Repositorio.Guardar(Div);
+                Response.Redirect(Request.RawUrl);
+            }
+            else
+            {
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error");
+                    return;
+                }
+                paso = Repositorio.Modificar(Div);
+                Response.Redirect(Request.RawUrl);
+            }
+
+            if (paso)
+            {
+                Utils.ShowToastr(this.Page, "Exito", "success");
+                return;
+            }
+            else
+                Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error");
+        }
+
+        protected void EliminarButton_Click(object sender, EventArgs e)
+        {
+            RepositorioBase<Divisas> Repositorio = new RepositorioBase<Divisas>();
+
+            var ID = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
+
+            if (ID != null)
+            {
+                if (Repositorio.Eliminar(Utils.ToInt(IDTextBox.Text)))
+                {
+                    Utils.ShowToastr(this.Page, "Exito", "success");
+                }
+                else
+                    Utils.ShowToastr(this.Page, "Error", "Error");
+            }
+            else
+                Utils.ShowToastr(this.Page, "Error", "Error");
+        }
+
+        protected void BuscarButton_Click(object sender, EventArgs e)
+        {
+            RepositorioBase<Divisas> Repositorio = new RepositorioBase<Divisas>();
+
+            Divisas Div = new Divisas();
+
+            Div = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
+
+            if (Div != null)
+                LlenaCampo(Div);
+            else
+                Utils.ShowToastr(this.Page, "Error", "Error");
         }
     }
 }
