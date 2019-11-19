@@ -21,6 +21,10 @@
               <label for="Filtro" class="col-sm-1 col-form-label">Filtro</label>
             <div class="col-md-2">
                     <asp:DropDownList ID="FiltroDropDown" runat="server" CssClass="form-control input-sm" >
+                        <asp:ListItem>Todo</asp:ListItem>
+                        <asp:ListItem>ID</asp:ListItem>
+                        <asp:ListItem>Nombre Persona</asp:ListItem>
+                        <asp:ListItem>Total Cambiado</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <label for="CheckBox" class="col-sm-1 col-form-label">Fecha?</label>
@@ -34,7 +38,7 @@
                     <asp:TextBox ID="CriterioTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                 </div>
                 <div class="col-md-4">
-                    <asp:Button ID="BuscarButton" runat="server" Class="btn btn-success input-sm" Text="Consultar"/>
+                    <asp:Button ID="BuscarButton" runat="server" Class="btn btn-success input-sm" Text="Consultar" OnClick="BuscarButton_Click"/>
                 </div>
             </div>
         </div>
