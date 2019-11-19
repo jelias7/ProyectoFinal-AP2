@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 
-namespace CasaDeCambio.Utils
+namespace CasaDeCambio.Utilitarios
 {
     public static class Utils
     {
