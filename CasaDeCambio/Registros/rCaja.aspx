@@ -20,31 +20,16 @@
                     </div>
                 </div>
                    <div class="form-group row">
-                 <label for="Pesos" class="col-sm-1 col-form-label">Pesos</label>
+                 <label for="Divisa" class="col-sm-1 col-form-label">Divisa</label>
                      <div class="col-lg-3">
-                         <asp:TextBox runat="server" CssClass="form-control input-sm" ID="PesosTextBox"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RFVPesos" runat="server" MaxLength="100" ControlToValidate="PesosTextBox" ErrorMessage="Cantidad de pesos invalida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                         <asp:DropDownList runat="server" CssClass="form-control" ID="DivisaDropDown"></asp:DropDownList>
                      </div>
                  </div>
                    <div class="form-group row">
-                 <label for="Dolar" class="col-sm-1 col-form-label">Dolares</label>
+                 <label for="Existencia" class="col-sm-1 col-form-label">Existencia</label>
                      <div class="col-lg-3">
-                         <asp:TextBox runat="server" CssClass="form-control input-sm" ID="DolarTextBox"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RFVDolar" runat="server" MaxLength="100" ControlToValidate="DolarTextBox" ErrorMessage="Cantidad de dolares invalida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                     </div>
-                 </div>
-                   <div class="form-group row">
-                 <label for="Euro" class="col-sm-1 col-form-label">Euros</label>
-                     <div class="col-lg-3">
-                         <asp:TextBox runat="server" CssClass="form-control input-sm" ID="EuroTextBox"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RFVEuro" runat="server" MaxLength="100" ControlToValidate="EuroTextBox" ErrorMessage="Cantidad de euros invalida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                     </div>
-                 </div>
-                   <div class="form-group row">
-                 <label for="LibraEsterlina" class="col-sm-1 col-form-label">Libra Esterlina</label>
-                     <div class="col-lg-3">
-                         <asp:TextBox runat="server" CssClass="form-control input-sm" ID="LibraTextBox"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RFVLibra" runat="server" MaxLength="100" ControlToValidate="LibraTextBox" ErrorMessage="Cantidad de libras invalida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                         <asp:TextBox runat="server" CssClass="form-control input-sm" ID="ExistenciaTextBox"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RFVExistencia" runat="server" MaxLength="100" ControlToValidate="ExistenciaTextBox" ErrorMessage="Cantidad de dinero invalida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      </div>
                  </div>
                   </div>
@@ -64,7 +49,7 @@
 
               <asp:Button Text="Nuevo" class="btn btn-warning btn-sm" CausesValidation="false" style="color:#fff" runat="server" ID="NuevoButton" />
               <asp:Button Text="Guardar" class="btn btn-success btn-sm" runat="server" ID="GuardarButton"/>
-              <asp:Button Text="Eliminar" class="btn btn-danger btn-sm" CausesValidation="false" runat="server" ID="EliminarButton" />
+              <asp:Button Text="Eliminar" class="btn btn-danger btn-sm" runat="server" ID="EliminarButton"/>
 
         </div>
        </div>

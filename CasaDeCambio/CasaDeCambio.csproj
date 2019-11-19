@@ -253,6 +253,7 @@
     <Compile Include="Registros\rUsuarios.aspx.designer.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

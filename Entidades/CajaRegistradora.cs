@@ -11,18 +11,14 @@ namespace Entidades
     {
         [Key]
         public int CajaId { get; set; }
-        public decimal ExistenciaPeso { get; set; }
-        public decimal ExistenciaDolar { get; set; }
-        public decimal ExistenciaEuro { get; set; }
-        public decimal ExistenciaLibraEsterlina { get; set; }
+        public int DivisaId { get; set; }
+        public decimal Existencia { get; set; }
         public DateTime Fecha { get; set; }
         public CajaRegistradora()
         {
             CajaId = 0;
-            ExistenciaPeso = 0;
-            ExistenciaDolar = 0;
-            ExistenciaEuro = 0;
-            ExistenciaLibraEsterlina = 0;
+            DivisaId = 0;
+            Existencia = 0;
             Fecha = DateTime.Now;
         }
     }

@@ -49,76 +49,31 @@ namespace CasaDeCambio.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVFecha;
         
         /// <summary>
-        /// PesosTextBox control.
+        /// DivisaDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PesosTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList DivisaDropDown;
         
         /// <summary>
-        /// RFVPesos control.
+        /// ExistenciaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVPesos;
+        protected global::System.Web.UI.WebControls.TextBox ExistenciaTextBox;
         
         /// <summary>
-        /// DolarTextBox control.
+        /// RFVExistencia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DolarTextBox;
-        
-        /// <summary>
-        /// RFVDolar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDolar;
-        
-        /// <summary>
-        /// EuroTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EuroTextBox;
-        
-        /// <summary>
-        /// RFVEuro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVEuro;
-        
-        /// <summary>
-        /// LibraTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LibraTextBox;
-        
-        /// <summary>
-        /// RFVLibra control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVLibra;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVExistencia;
         
         /// <summary>
         /// SummaryValidation control.
