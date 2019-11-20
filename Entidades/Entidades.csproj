@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CajaRegistradora.cs" />
+    <Compile Include="EntradaMonedas.cs" />
     <Compile Include="Cambios.cs" />
     <Compile Include="CambiosDetalle.cs" />
     <Compile Include="Divisas.cs" />

@@ -24,9 +24,9 @@ namespace CasaDeCambio.Consultas
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            Expression<Func<CajaRegistradora, bool>> filtros = x => true;
-            RepositorioBase<CajaRegistradora> repositorio = new RepositorioBase<CajaRegistradora>();
-            List<CajaRegistradora> lista = new List<CajaRegistradora>();
+            Expression<Func<EntradaMonedas, bool>> filtros = x => true;
+            RepositorioBase<EntradaMonedas> repositorio = new RepositorioBase<EntradaMonedas>();
+            List<EntradaMonedas> lista = new List<EntradaMonedas>();
             
             DateTime Desde = Utils.ToDateTime(DesdeFecha.Text);
             DateTime Hasta = Utils.ToDateTime(HastaFecha.Text);
@@ -36,7 +36,7 @@ namespace CasaDeCambio.Consultas
             {
                 case 0: filtros = x => true;
                 break; //todo
-                case 1: filtros = c => c.CajaId == criterio;
+                case 1: filtros = c => c.EntradaId == criterio;
                 break; //ID
                 case 2: filtros = c => c.DivisaId == criterio;
                 break; //ID de Divisa

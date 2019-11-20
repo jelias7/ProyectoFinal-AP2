@@ -26,6 +26,12 @@
                          <asp:RequiredFieldValidator ID="RFVDescripcion" runat="server" MaxLength="100" ControlToValidate="DescripcionTextBox" ErrorMessage="Descripcion no valida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      </div>
                  </div>
+                 <div class="form-group row">
+                 <label for="Existencia" class="col-sm-1 col-form-label">Existencia</label>
+                     <div class="col-lg-3">
+                         <asp:TextBox runat="server" CssClass="form-control input-sm" ID="ExistenciaTextBox" ReadOnly="true"></asp:TextBox>
+                     </div>
+                 </div>
                    <div class="form-group row">
                  <label for="TasaCompra" class="col-sm-1 col-form-label">Tasa de Compra</label>
                      <div class="col-md-1 col-sm-2 col-xs-4">

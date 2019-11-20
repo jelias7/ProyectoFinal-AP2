@@ -12,6 +12,7 @@ namespace Entidades
         [Key]
         public int DivisaId { get; set; }
         public string Descripcion { get; set; }
+        public decimal Existencia { get; set; }
         public decimal Tasa_Compra { get; set; }
         public decimal Tasa_Venta { get; set; }
         public DateTime Fecha { get; set; }
@@ -19,6 +20,7 @@ namespace Entidades
         {
             DivisaId = 0;
             Descripcion = string.Empty;
+            Existencia = 0;
             Tasa_Compra = 0;
             Tasa_Venta = 0;
             Fecha = DateTime.Now;

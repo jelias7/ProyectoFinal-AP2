@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class CajaRegistradora
+    public class EntradaMonedas
     {
         [Key]
-        public int CajaId { get; set; }
+        public int EntradaId { get; set; }
         public int DivisaId { get; set; }
         public decimal Existencia { get; set; }
         public DateTime Fecha { get; set; }
-        public CajaRegistradora()
+        public EntradaMonedas()
         {
-            CajaId = 0;
+            EntradaId = 0;
             DivisaId = 0;
             Existencia = 0;
             Fecha = DateTime.Now;

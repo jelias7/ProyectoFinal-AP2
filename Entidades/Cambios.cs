@@ -13,8 +13,6 @@ namespace Entidades
     {
         [Key]
         public int CambiosId { get; set; }
-        [NotMapped]
-        public int CajaId { get; set; }
         public string Nombre_Persona { get; set; }
         public decimal Total_Cambiado { get; set; }
         public DateTime Fecha { get; set; }
@@ -23,7 +21,6 @@ namespace Entidades
         public Cambios()
         {
             CambiosId = 0;
-            CajaId = 0;
             Nombre_Persona = string.Empty;
             Total_Cambiado = 0;
             Fecha = DateTime.Now;

@@ -31,6 +31,7 @@ namespace CasaDeCambio.Registros
 
             Divisa.DivisaId = Utils.ToInt(IDTextBox.Text);
             Divisa.Descripcion = DescripcionTextBox.Text;
+            Divisa.Existencia = Utils.ToDecimal(ExistenciaTextBox.Text);
             Divisa.Tasa_Compra = Utils.ToDecimal(TasaCompraTextBox.Text);
             Divisa.Tasa_Venta = Utils.ToDecimal(TasaVentaTextBox.Text);
             Divisa.Fecha = Utils.ToDateTime(FechaTextBox.Text);
@@ -41,6 +42,7 @@ namespace CasaDeCambio.Registros
         {
             IDTextBox.Text = Divisa.DivisaId.ToString();
             DescripcionTextBox.Text = Divisa.Descripcion;
+            ExistenciaTextBox.Text = Divisa.Existencia.ToString();
             TasaCompraTextBox.Text = Divisa.Tasa_Compra.ToString();
             TasaVentaTextBox.Text = Divisa.Tasa_Venta.ToString();
             FechaTextBox.Text = Divisa.Fecha.ToString("yyyy-MM-dd");

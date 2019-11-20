@@ -32,24 +32,24 @@ namespace CasaDeCambio.Registros
         }
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<CajaRegistradora> Repositorio = new RepositorioBase<CajaRegistradora>();
-            CajaRegistradora ID = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
+            RepositorioBase<EntradaMonedas> Repositorio = new RepositorioBase<EntradaMonedas>();
+            EntradaMonedas ID = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
             return (ID != null);
         }
-        private CajaRegistradora LlenaClase()
+        private EntradaMonedas LlenaClase()
         {
-            CajaRegistradora Caja = new CajaRegistradora();
+            EntradaMonedas Caja = new EntradaMonedas();
 
-            Caja.CajaId = Utils.ToInt(IDTextBox.Text);
+            Caja.EntradaId = Utils.ToInt(IDTextBox.Text);
             Caja.DivisaId = Utils.ToInt(DivisaDropDown.SelectedValue);
             Caja.Existencia = Utils.ToDecimal(ExistenciaTextBox.Text);
             Caja.Fecha = Utils.ToDateTime(FechaTextBox.Text);
 
             return Caja;
         }
-        private void LlenaCampo(CajaRegistradora Caja)
+        private void LlenaCampo(EntradaMonedas Caja)
         {
-            IDTextBox.Text = Caja.CajaId.ToString();
+            IDTextBox.Text = Caja.EntradaId.ToString();
             DivisaDropDown.SelectedValue = Caja.DivisaId.ToString();
             ExistenciaTextBox.Text = Caja.Existencia.ToString();
             FechaTextBox.Text = Caja.Fecha.ToString("yyyy-MM-dd");
@@ -61,8 +61,8 @@ namespace CasaDeCambio.Registros
 
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
-            CajaRegistradora Caja = new CajaRegistradora();
-            RepositorioBase<CajaRegistradora> Repositorio = new RepositorioBase<CajaRegistradora>();
+            EntradaMonedas Caja = new EntradaMonedas();
+            RepositorioBase<EntradaMonedas> Repositorio = new RepositorioBase<EntradaMonedas>();
 
             bool paso = false;
 
@@ -95,7 +95,7 @@ namespace CasaDeCambio.Registros
 
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<CajaRegistradora> Repositorio = new RepositorioBase<CajaRegistradora>();
+            RepositorioBase<EntradaMonedas> Repositorio = new RepositorioBase<EntradaMonedas>();
 
             var ID = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
 
@@ -115,9 +115,9 @@ namespace CasaDeCambio.Registros
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<CajaRegistradora> Repositorio = new RepositorioBase<CajaRegistradora>();
+            RepositorioBase<EntradaMonedas> Repositorio = new RepositorioBase<EntradaMonedas>();
 
-            CajaRegistradora Caja = new CajaRegistradora();
+            EntradaMonedas Caja = new EntradaMonedas();
 
             Caja = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
 

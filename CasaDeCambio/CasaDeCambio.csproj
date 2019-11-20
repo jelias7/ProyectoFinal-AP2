@@ -92,7 +92,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Consultas\cCaja.aspx" />
+    <Content Include="Consultas\cEntrada.aspx" />
     <Content Include="Consultas\cCambios.aspx" />
     <Content Include="Consultas\cDivisas.aspx" />
     <Content Include="Consultas\cEmpresas.aspx" />
@@ -107,7 +107,7 @@
     <Content Include="Content\toastr.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Registros\rCaja.aspx" />
+    <Content Include="Registros\rEntrada.aspx" />
     <Content Include="Registros\rCambios.aspx" />
     <Content Include="Registros\rDivisas.aspx" />
     <Content Include="Registros\rEmpresas.aspx" />
@@ -165,12 +165,12 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\cCaja.aspx.cs">
-      <DependentUpon>cCaja.aspx</DependentUpon>
+    <Compile Include="Consultas\cEntrada.aspx.cs">
+      <DependentUpon>cEntrada.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Consultas\cCaja.aspx.designer.cs">
-      <DependentUpon>cCaja.aspx</DependentUpon>
+    <Compile Include="Consultas\cEntrada.aspx.designer.cs">
+      <DependentUpon>cEntrada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\cCambios.aspx.cs">
       <DependentUpon>cCambios.aspx</DependentUpon>
@@ -218,12 +218,12 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registros\rCaja.aspx.cs">
-      <DependentUpon>rCaja.aspx</DependentUpon>
+    <Compile Include="Registros\rEntrada.aspx.cs">
+      <DependentUpon>rEntrada.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registros\rCaja.aspx.designer.cs">
-      <DependentUpon>rCaja.aspx</DependentUpon>
+    <Compile Include="Registros\rEntrada.aspx.designer.cs">
+      <DependentUpon>rEntrada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rCambios.aspx.cs">
       <DependentUpon>rCambios.aspx</DependentUpon>
