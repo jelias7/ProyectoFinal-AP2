@@ -45,6 +45,13 @@ namespace CasaDeCambio.Registros
             TipoDropDown.SelectedValue = User.Tipo_Usuario;
             FechaTextBox.Text = User.Fecha.ToString("yyyy-MM-dd");
         }
+        private void Limpiar()
+        {
+            IDTextBox.Text = "0";
+            UsernameTextBox.Text = "";
+            PasswordTextBox.Text = "";
+            FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
@@ -62,7 +69,7 @@ namespace CasaDeCambio.Registros
             if (Utils.ToInt(IDTextBox.Text) == 0)
             {
                 paso = Repositorio.Guardar(User);
-                Response.Redirect(Request.RawUrl);
+                Limpiar();
             }
             else
             {
@@ -72,7 +79,7 @@ namespace CasaDeCambio.Registros
                     return;
                 }
                 paso = Repositorio.Modificar(User);
-                Response.Redirect(Request.RawUrl);
+                Limpiar();
             }
 
             if (paso)

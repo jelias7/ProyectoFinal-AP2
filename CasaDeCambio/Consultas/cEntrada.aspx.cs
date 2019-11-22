@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace CasaDeCambio.Consultas
 {
-    public partial class cCaja : System.Web.UI.Page
+    public partial class cEntrada : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

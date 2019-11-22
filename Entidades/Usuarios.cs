@@ -14,12 +14,10 @@ namespace Entidades
         public string Username { get; set; }
         public string Password { get; set; }
         public string Tipo_Usuario { get; set; }
-        public int EmpresaId { get; set; }
         public DateTime Fecha { get; set; }
         public Usuarios()
         {
             UsuarioId = 0;
-            EmpresaId = 0;
             Username = string.Empty;
             Password = string.Empty;
             Tipo_Usuario = string.Empty;

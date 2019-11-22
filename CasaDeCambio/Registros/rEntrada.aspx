@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Caja Registradora" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="rEntrada.aspx.cs" Inherits="CasaDeCambio.Registros.rCaja" %>
+﻿<%@ Page Title="Entrada de Moneda" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="rEntrada.aspx.cs" Inherits="CasaDeCambio.Registros.rEntrada" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">

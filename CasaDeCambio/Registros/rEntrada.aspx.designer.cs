@@ -10,7 +10,7 @@
 namespace CasaDeCambio.Registros {
     
     
-    public partial class rCaja {
+    public partial class rEntrada {
         
         /// <summary>
         /// IDTextBox control.

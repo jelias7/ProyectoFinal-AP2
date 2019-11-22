@@ -47,6 +47,15 @@ namespace CasaDeCambio.Registros
             TasaVentaTextBox.Text = Divisa.Tasa_Venta.ToString();
             FechaTextBox.Text = Divisa.Fecha.ToString("yyyy-MM-dd");
         }
+        private void Limpiar()
+        {
+            IDTextBox.Text = "0";
+            DescripcionTextBox.Text = "";
+            ExistenciaTextBox.Text = "";
+            TasaCompraTextBox.Text = "";
+            TasaVentaTextBox.Text = "";
+            FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
@@ -64,7 +73,7 @@ namespace CasaDeCambio.Registros
             if (Utils.ToInt(IDTextBox.Text) == 0)
             {
                 paso = Repositorio.Guardar(Div);
-                Response.Redirect(Request.RawUrl);
+                Limpiar();
             }
             else
             {
@@ -74,7 +83,7 @@ namespace CasaDeCambio.Registros
                     return;
                 }
                 paso = Repositorio.Modificar(Div);
-                Response.Redirect(Request.RawUrl);
+                Limpiar();
             }
 
             if (paso)

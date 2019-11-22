@@ -46,7 +46,6 @@
     <Compile Include="Cambios.cs" />
     <Compile Include="CambiosDetalle.cs" />
     <Compile Include="Divisas.cs" />
-    <Compile Include="Empresas.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

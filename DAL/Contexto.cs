@@ -12,9 +12,8 @@ namespace DAL
     {
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Divisas> Divisas { get; set; }
-        public DbSet<EntradaMonedas> CajaRegistradora { get; set; }
+        public DbSet<EntradaMonedas> Entrada { get; set; }
         public DbSet<Cambios> Cambios { get; set; }
-        public DbSet<Empresas> Empresas { get; set; }
         public Contexto() : base("ConStr") { }
     }
 }

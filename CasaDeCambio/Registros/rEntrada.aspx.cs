@@ -10,7 +10,7 @@ using CasaDeCambio.Utilitarios;
 
 namespace CasaDeCambio.Registros
 {
-    public partial class rCaja : System.Web.UI.Page
+    public partial class rEntrada : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,7 +54,13 @@ namespace CasaDeCambio.Registros
             ExistenciaTextBox.Text = Caja.Existencia.ToString();
             FechaTextBox.Text = Caja.Fecha.ToString("yyyy-MM-dd");
         }
-        protected void NuevoButton_Click(object sender, EventArgs e)
+        private void Limpiar()
+        {
+            IDTextBox.Text = "0";
+            ExistenciaTextBox.Text = "";
+            FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        }
+            protected void NuevoButton_Click(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
         }
@@ -71,17 +77,17 @@ namespace CasaDeCambio.Registros
             if (Utils.ToInt(IDTextBox.Text) == 0)
             {
                 paso = Repositorio.Guardar(Caja);
-                Response.Redirect(Request.RawUrl);
+                Limpiar();
             }
             else
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error");
+                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "error");
                     return;
                 }
                 paso = Repositorio.Modificar(Caja);
-                Response.Redirect(Request.RawUrl);
+                Limpiar();
             }
 
             if (paso)
@@ -90,7 +96,7 @@ namespace CasaDeCambio.Registros
                 return;
             }
             else
-                Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error");
+                Utils.ShowToastr(this.Page, "No se pudo Guardar", "error");
         }
 
         protected void EliminarButton_Click(object sender, EventArgs e)
@@ -106,10 +112,10 @@ namespace CasaDeCambio.Registros
                     Utils.ShowToastr(this.Page, "Exito", "success");
                 }
                 else
-                    Utils.ShowToastr(this.Page, "Error", "Error");
+                    Utils.ShowToastr(this.Page, "Error", "error");
             }
             else
-                Utils.ShowToastr(this.Page, "Error", "Error");
+                Utils.ShowToastr(this.Page, "Error", "error");
 
         }
 
@@ -124,7 +130,7 @@ namespace CasaDeCambio.Registros
             if (Caja != null)
                 LlenaCampo(Caja);
             else
-                Utils.ShowToastr(this.Page, "Error", "Error");
+                Utils.ShowToastr(this.Page, "Error", "error");
 
         }
     }

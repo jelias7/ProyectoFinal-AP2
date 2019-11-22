@@ -10,7 +10,7 @@
 namespace CasaDeCambio.Consultas {
     
     
-    public partial class cCaja {
+    public partial class cEntrada {
         
         /// <summary>
         /// DesdeFecha control.
