@@ -43,7 +43,7 @@ namespace CasaDeCambio.Consultas
                 case 3: filtros = c => c.Existencia == criterio;
                 break; //Existencia
             }
-            if (CheckBoxFecha.Checked == true)
+            if (DesdeFecha.Text != "" && HastaFecha.Text != "")
             {
                 lista = repositorio.GetList(filtros).Where(x => x.Fecha.Date >= Desde && x.Fecha.Date <= Hasta).ToList();
             }

@@ -27,10 +27,6 @@
                         <asp:ListItem>Tipo</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <label for="CheckBox" class="col-sm-1 col-form-label">Fecha?</label>
-                <div class="col-xs-1">
-                    <asp:CheckBox runat="server" CssClass="custom-checkbox" ID="CheckBoxFecha" />
-                </div>
             </div>
              <div class="form-group row">
                 <label for="Criterio" class="col-sm-1 col-form-label">Criterio</label>

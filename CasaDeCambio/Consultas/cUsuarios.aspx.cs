@@ -50,7 +50,7 @@ namespace CasaDeCambio.Consultas
                     filtros = c => c.Tipo_Usuario.Contains(CriterioTextBox.Text);
                     break; //Tipo
             }
-            if (CheckBoxFecha.Checked == true)
+            if (DesdeFecha.Text != "" && HastaFecha.Text != "")
             {
                 lista = repositorio.GetList(filtros).Where(x => x.Fecha.Date >= Desde && x.Fecha.Date <= Hasta).ToList();
             }
