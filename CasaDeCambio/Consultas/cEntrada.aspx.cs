@@ -45,7 +45,7 @@ namespace CasaDeCambio.Consultas
             }
             if (CheckBoxFecha.Checked == true)
             {
-               lista = repositorio.GetList(filtros).Where(x => x.Fecha.Date >= Desde && x.Fecha.Date <= Hasta).ToList();
+                lista = repositorio.GetList(filtros).Where(x => x.Fecha.Date >= Desde && x.Fecha.Date <= Hasta).ToList();
             }
             else
             {

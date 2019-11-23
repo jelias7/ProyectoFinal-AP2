@@ -3,20 +3,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
 <div class="panel panel-primary">
+          <div class="panel-heading" style="font-size: 20px; color: white; padding:15px; background-color:darkgoldenrod">CONSULTA DE DIVISAS</div><br />
         <div class="panel-body">
             <div class="form-group row">
                 <label for="Desde" class="col-sm-1 col-form-label">Desde</label>
                 <div class="col-md-2">
                     <asp:TextBox type="date" runat="server" ID="DesdeFecha" Class="form-control input-sm"></asp:TextBox>
                 </div>
-            </div>
-
-            <div class="form-group row">
-              <label for="Hasta" class="col-sm-1 col-form-label">Hasta</label>
+               <label for="Hasta" class="col-xs-1 col-form-label">Hasta</label>
                 <div class="col-md-2">
                   <asp:TextBox type="date" runat="server" ID="HastaFecha" Class="form-control input-sm"></asp:TextBox>
                 </div>
             </div>
+
               <div class="form-group row">
               <label for="Filtro" class="col-sm-1 col-form-label">Filtro</label>
             <div class="col-md-2">
