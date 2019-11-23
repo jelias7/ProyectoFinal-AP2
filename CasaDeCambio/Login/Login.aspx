@@ -44,21 +44,19 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username" />
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        <label for="Username" class="col-form-label" style="color:white">Username</label>
+                        <asp:TextBox runat="server" ID="UsernameTextBox" CssClass="form-control"></asp:TextBox>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password" />
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+                        <label for="Password" class="col-form-label" style="color:white">Password</label>
+                        <asp:TextBox type="password" runat="server" ID="PasswordTextBox" CssClass="form-control"></asp:TextBox>
 					</div>
-
+                    <asp:Label runat="server" Text="" CssClass="col-form-label-lg" style="color:white" ID="Mensaje"></asp:Label>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Entrar
-						</button>
+                        <asp:Button CssClass="login100-form-btn" runat="server" Text="Entrar" ID="EntrarButton" OnClick="EntrarButton_Click"/>
 					</div>
-
+                    
 					<div class="text-center p-t-90">
 						<a class="txt1" href="#">
 							Crear Usuario

@@ -13,7 +13,7 @@
     <script src="/Scripts/bootstrap.min.js"></script>
     <script src="/Scripts/modernizr-2.8.3.js"></script>
     <script src="/Scripts/toastr.min.js"></script>
-    <title>Casa de Cambio - <%: Page.Title %></title>
+    <title>Casa de Cambio <%: Page.Title %></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -90,6 +90,9 @@
                                 <a class="dropdown-item" href="/Consultas/cDivisas.aspx">Divisa</a>
                                 <a class="dropdown-item" href="/Consultas/cUsuarios.aspx">Usuarios</a>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton runat="server" CssClass="btn btn-link" style="color:white" ID="LogOut" Text="Desconectar" OnClick="LogOut_Click"></asp:LinkButton> 
                         </li>
                     </ul>
                 </div>
