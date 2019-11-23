@@ -34,9 +34,13 @@
                         <asp:TextBox ID="DineroTextBox" runat="server" class="form-control input-sm"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFVDinero" runat="server" MaxLength="200" ControlToValidate="DineroTextBox" ErrorMessage="Cantidad de dinero invalida" ForeColor="Black" Display="None" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
                     </div>
-                    <label for="Divisa" class="col-xs-1 col-form-label">Divisa</label>
+                    <label for="DeDivisa" class="col-xs-1 col-form-label">De</label>
                     <div class="col-lg-3">
-                        <asp:DropDownList ID="DivisaDropDown" runat="server" Class="form-control input-sm"></asp:DropDownList>
+                        <asp:DropDownList ID="DeDivisaDropDown" runat="server" Class="form-control input-sm"></asp:DropDownList>
+                    </div>
+                    <label for="CualDivisa" class="col-xs-1 col-form-label">A</label>
+                    <div class="col-lg-3">
+                        <asp:DropDownList ID="CualDivisaDropDown" runat="server" Class="form-control input-sm"></asp:DropDownList>
                     </div>
                      <div class="col-sm-2">
                         <asp:LinkButton runat="server" ID="AgregarGrid" CssClass="btn btn-outline-info btn-md" Text="+"></asp:LinkButton>

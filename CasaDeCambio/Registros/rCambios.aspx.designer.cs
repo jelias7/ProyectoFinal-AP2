@@ -85,13 +85,22 @@ namespace CasaDeCambio.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDinero;
         
         /// <summary>
-        /// DivisaDropDown control.
+        /// DeDivisaDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DivisaDropDown;
+        protected global::System.Web.UI.WebControls.DropDownList DeDivisaDropDown;
+        
+        /// <summary>
+        /// CualDivisaDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList CualDivisaDropDown;
         
         /// <summary>
         /// AgregarGrid control.

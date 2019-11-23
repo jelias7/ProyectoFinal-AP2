@@ -12,23 +12,34 @@ namespace Entidades
     {
         [Key]
         public int DetalleId { get; set; }
-        public string Divisa { get; set; }
-        public decimal Cantidad { get; set; }
+        public int DeDivisaId { get; set; }
+        public int ADivisaId { get; set; }
+        public string DeDivisa { get; set; }
+        public string ADivisa { get; set; }
+        public decimal De { get; set; }
+        public decimal A { get; set; }
         public decimal Cambio { get; set; }
         public DateTime Fecha { get; set; }
         public CambiosDetalle()
         {
             DetalleId = 0;
-            Divisa = string.Empty;
-            Cantidad = 0;
+            DeDivisaId = 0;
+            ADivisaId = 0;
+            DeDivisa = string.Empty;
+            ADivisa = string.Empty;
+            De = 0;
+            A = 0;
             Cambio = 0;
             Fecha = DateTime.Now;
         }
-        public CambiosDetalle(string div, decimal can, decimal cam, DateTime date)
+        public CambiosDetalle(int deid, int aid, string ded, string dea, decimal de, decimal a, DateTime date)
         {
-            Divisa = div;
-            Cantidad = can;
-            Cambio = cam;
+            DeDivisaId = deid;
+            ADivisaId = aid;
+            DeDivisa = ded;
+            ADivisa = dea;
+            De = de;
+            A = a;
             Fecha = date;
         }
     }
