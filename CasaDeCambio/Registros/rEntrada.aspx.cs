@@ -68,7 +68,6 @@ namespace CasaDeCambio.Registros
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
             EntradaMonedas Caja = new EntradaMonedas();
-            RepositorioBase<EntradaMonedas> Repositorio = new RepositorioBase<EntradaMonedas>();
 
             bool paso = false;
 
@@ -76,7 +75,7 @@ namespace CasaDeCambio.Registros
 
             if (Utils.ToInt(IDTextBox.Text) == 0)
             {
-                paso = Repositorio.Guardar(Caja);
+                paso = BLL.EntradaBLL.Guardar(Caja);
                 Limpiar();
             }
             else
@@ -86,7 +85,7 @@ namespace CasaDeCambio.Registros
                     Utils.ShowToastr(this.Page, "No se pudo Guardar", "error");
                     return;
                 }
-                paso = Repositorio.Modificar(Caja);
+                paso = BLL.EntradaBLL.Modificar(Caja);
                 Limpiar();
             }
 
@@ -107,7 +106,7 @@ namespace CasaDeCambio.Registros
 
             if (ID != null)
             {
-                if (Repositorio.Eliminar(Utils.ToInt(IDTextBox.Text)))
+                if (BLL.EntradaBLL.Eliminar(Utils.ToInt(IDTextBox.Text)))
                 {
                     Utils.ShowToastr(this.Page, "Exito", "success");
                 }
