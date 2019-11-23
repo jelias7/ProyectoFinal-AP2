@@ -32,7 +32,11 @@ namespace CasaDeCambio.Registros
             Usuario.UsuarioId = Utils.ToInt(IDTextBox.Text);
             Usuario.Username = UsernameTextBox.Text;
             Usuario.Password = PasswordTextBox.Text;
-            Usuario.Tipo_Usuario = TipoDropDown.SelectedValue;
+            switch (TipoDropDown.SelectedIndex)
+            {
+                case 0: Usuario.Tipo_Usuario = "Administrador"; break;
+                case 1: Usuario.Tipo_Usuario = "Cajero"; break;
+            }
             Usuario.Fecha = Utils.ToDateTime(FechaTextBox.Text);
 
             return Usuario;

@@ -31,7 +31,10 @@
                  <div class="form-group row">
                  <label for="Tipo" class="col-sm-1 col-form-label">Tipo</label>
                      <div class="col-lg-3">
-                       <asp:DropDownList runat="server" CssClass="form-control" ID="TipoDropDown"></asp:DropDownList>
+                       <asp:DropDownList runat="server" CssClass="form-control" ID="TipoDropDown">
+                           <asp:ListItem>Administrador</asp:ListItem>
+                           <asp:ListItem>Cajero</asp:ListItem>
+                         </asp:DropDownList>
                      </div>
                  </div>
                  <div class="form-group row">
