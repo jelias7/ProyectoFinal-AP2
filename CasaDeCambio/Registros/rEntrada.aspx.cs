@@ -82,7 +82,7 @@ namespace CasaDeCambio.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "error");
+                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error", "Error");
                     return;
                 }
                 paso = BLL.EntradaBLL.Modificar(Caja);
@@ -91,11 +91,11 @@ namespace CasaDeCambio.Registros
 
             if (paso)
             {
-                Utils.ShowToastr(this.Page, "Exito", "success");
+                Utils.ShowToastr(this.Page, "Guardado", "Exito", "Success");
                 return;
             }
             else
-                Utils.ShowToastr(this.Page, "No se pudo Guardar", "error");
+                Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error", "Error");
         }
 
         protected void EliminarButton_Click(object sender, EventArgs e)
@@ -108,13 +108,14 @@ namespace CasaDeCambio.Registros
             {
                 if (BLL.EntradaBLL.Eliminar(Utils.ToInt(IDTextBox.Text)))
                 {
-                    Utils.ShowToastr(this.Page, "Exito", "success");
+                    Utils.ShowToastr(this.Page, "Se ha borrado", "Exito", "Success");
+                    Limpiar();
                 }
                 else
-                    Utils.ShowToastr(this.Page, "Error", "error");
+                    Utils.ShowToastr(this.Page, "No se ha borrado", "Error", "Error");
             }
             else
-                Utils.ShowToastr(this.Page, "Error", "error");
+                Utils.ShowToastr(this.Page, "Error", "Error", "Error");
 
         }
 
@@ -129,7 +130,7 @@ namespace CasaDeCambio.Registros
             if (Caja != null)
                 LlenaCampo(Caja);
             else
-                Utils.ShowToastr(this.Page, "Error", "error");
+                Utils.ShowToastr(this.Page, "No se ha encontrado", "Error", "Error");
 
         }
     }

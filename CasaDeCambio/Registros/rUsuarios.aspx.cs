@@ -80,7 +80,7 @@ namespace CasaDeCambio.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error");
+                    Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error", "Error");
                     return;
                 }
                 paso = Repositorio.Modificar(User);
@@ -89,11 +89,11 @@ namespace CasaDeCambio.Registros
 
             if (paso)
             {
-                Utils.ShowToastr(this.Page, "Exito", "success");
+                Utils.ShowToastr(this.Page, "Guardado", "Exito","Success");
                 return;
             }
             else
-                Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error");
+                Utils.ShowToastr(this.Page, "No se pudo Guardar", "Error","Error");
         }
 
         protected void EliminarButton_Click(object sender, EventArgs e)
@@ -106,13 +106,14 @@ namespace CasaDeCambio.Registros
             {
                 if (Repositorio.Eliminar(Utils.ToInt(IDTextBox.Text)))
                 {
-                    Utils.ShowToastr(this.Page, "Exito", "success");
+                    Utils.ShowToastr(this.Page, "Se ha borrado", "Exito","Success");
+                    Limpiar();
                 }
                 else
-                    Utils.ShowToastr(this.Page, "Error", "Error");
+                    Utils.ShowToastr(this.Page, "No se ha borrado", "Error","Error");
             }
             else
-                Utils.ShowToastr(this.Page, "Error", "Error");
+                Utils.ShowToastr(this.Page, "Error", "Error","Error");
         }
 
         protected void BuscarButton_Click(object sender, EventArgs e)
@@ -126,7 +127,7 @@ namespace CasaDeCambio.Registros
             if (User != null)
                 LlenaCampo(User);
             else
-                Utils.ShowToastr(this.Page, "Error", "Error");
+                Utils.ShowToastr(this.Page, "No se ha encontrado", "Error", "Error");
         }
     }
 }
