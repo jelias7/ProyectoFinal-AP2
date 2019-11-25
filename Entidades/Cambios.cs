@@ -16,7 +16,6 @@ namespace Entidades
         public string Nombre_Persona { get; set; }
         public decimal Total_Cambiado { get; set; }
         public DateTime Fecha { get; set; }
-        public int UsuarioId { get; set; }
         public virtual List<CambiosDetalle> Detalle { get; set; }
         public Cambios()
         {
@@ -24,7 +23,6 @@ namespace Entidades
             Nombre_Persona = string.Empty;
             Total_Cambiado = 0;
             Fecha = DateTime.Now;
-            UsuarioId = 0;
             Detalle = new List<CambiosDetalle>(); 
         }
     }
