@@ -54,6 +54,7 @@ namespace CasaDeCambio.Registros
             IDTextBox.Text = "0";
             UsernameTextBox.Text = "";
             PasswordTextBox.Text = "";
+            ConfirmarTextBox.Text = "";
             FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         protected void NuevoButton_Click(object sender, EventArgs e)

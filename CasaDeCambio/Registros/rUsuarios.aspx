@@ -49,6 +49,7 @@
                      <div class="col-lg-3">
                          <asp:TextBox type="password" runat="server" CssClass="form-control input-sm" ID="ConfirmarTextBox"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RFVConfirmar" runat="server" MaxLength="100" ControlToValidate="ConfirmarTextBox" ErrorMessage="Confirmacion no valida" ForeColor="Black" Display="None" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                         <asp:CompareValidator ID="ComparePasswords" runat="server" ControlToValidate="ConfirmarTextBox" ControlToCompare="PasswordTextBox" ErrorMessage="Passwords no coinciden" ForeColor="Black" Display="None" SetFocusOnError="true"></asp:CompareValidator>
                      </div>
                  </div>
               </div>

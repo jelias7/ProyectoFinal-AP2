@@ -112,6 +112,15 @@ namespace CasaDeCambio.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVConfirmar;
         
         /// <summary>
+        /// ComparePasswords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator ComparePasswords;
+        
+        /// <summary>
         /// SummaryValidation control.
         /// </summary>
         /// <remarks>
