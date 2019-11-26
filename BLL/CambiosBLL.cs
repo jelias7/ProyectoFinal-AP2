@@ -23,12 +23,15 @@ namespace BLL
                     foreach (var item in c.Detalle)
                     {
                         var de = prod.Buscar(item.DeDivisaId);
-                        var a = prod.Buscar(item.ADivisaId);
                         de.Existencia += item.De;
-                        a.Existencia -= item.A;
 
-                        prod.Modificar(a);
                         prod.Modificar(de);
+                    }
+                    foreach(var item in c.Detalle)
+                    {
+                        var a = prod.Buscar(item.ADivisaId);
+                        a.Existencia -= item.De;
+                        prod.Modificar(a);
                     }
                     paso = db.SaveChanges() > 0;
                 }
@@ -53,8 +56,8 @@ namespace BLL
                 {
                     var de = prod.Buscar(item.DeDivisaId);
                     var a = prod.Buscar(item.ADivisaId);
-                    de.Existencia += item.De;
-                    a.Existencia += item.A;
+                    de.Existencia -= item.De;
+                    a.Existencia += item.De;
                     prod.Modificar(de);
                     prod.Modificar(a);
                 }
@@ -87,7 +90,7 @@ namespace BLL
                     foreach (var item in cam.Detalle)
                     {
                         db.Divisas.Find(item.DeDivisaId).Existencia += item.De;
-                        db.Divisas.Find(item.ADivisaId).Existencia += item.A;
+                        db.Divisas.Find(item.ADivisaId).Existencia += item.De;
                         if (!c.Detalle.ToList().Exists(v => v.DetalleId == item.DetalleId))
                         {
                             db.Entry(item).State = EntityState.Deleted;
@@ -97,7 +100,7 @@ namespace BLL
                     foreach (var item in c.Detalle)
                     {
                         db.Divisas.Find(item.DeDivisaId).Existencia -= item.De;
-                        db.Divisas.Find(item.ADivisaId).Existencia -= item.A;
+                        db.Divisas.Find(item.ADivisaId).Existencia -= item.De;
                         var estado = item.DetalleId > 0 ? EntityState.Modified : EntityState.Added;
                         db.Entry(item).State = estado;
                     }

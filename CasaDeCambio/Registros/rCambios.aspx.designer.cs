@@ -49,6 +49,15 @@ namespace CasaDeCambio.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVFecha;
         
         /// <summary>
+        /// OpcionDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList OpcionDropDown;
+        
+        /// <summary>
         /// PersonaTextBox control.
         /// </summary>
         /// <remarks>
@@ -74,15 +83,6 @@ namespace CasaDeCambio.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DineroTextBox;
-        
-        /// <summary>
-        /// RFVDinero control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDinero;
         
         /// <summary>
         /// DeDivisaDropDown control.
