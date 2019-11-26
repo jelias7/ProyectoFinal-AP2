@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.13021in</Width>
+              <Width>1.30208in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.13021in</Width>
+              <Width>1.30208in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.13021in</Width>
+              <Width>1.30208in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.13021in</Width>
+              <Width>1.30208in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -31,7 +31,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value> ID</Value>
+                              <Value>ID</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -53,7 +53,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </BottomBorder>
-                        <BackgroundColor>SeaGreen</BackgroundColor>
+                        <BackgroundColor>Maroon</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -71,7 +71,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Username</Value>
+                              <Value>Persona</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -93,7 +93,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </BottomBorder>
-                        <BackgroundColor>SeaGreen</BackgroundColor>
+                        <BackgroundColor>Maroon</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -111,7 +111,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tipo Usuario</Value>
+                              <Value>Total Cambiado</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -133,7 +133,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </BottomBorder>
-                        <BackgroundColor>SeaGreen</BackgroundColor>
+                        <BackgroundColor>Maroon</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -173,7 +173,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </BottomBorder>
-                        <BackgroundColor>SeaGreen</BackgroundColor>
+                        <BackgroundColor>Maroon</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -189,14 +189,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="UsuarioId">
+                    <Textbox Name="CambiosId">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!UsuarioId.Value</Value>
+                              <Value>=Fields!CambiosId.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -208,7 +208,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>UsuarioId</rd:DefaultName>
+                      <rd:DefaultName>CambiosId</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -224,14 +224,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Username">
+                    <Textbox Name="Nombre_Persona">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Username.Value</Value>
+                              <Value>=Fields!Nombre_Persona.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -243,7 +243,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Username</rd:DefaultName>
+                      <rd:DefaultName>Nombre_Persona</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -259,14 +259,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Tipo_Usuario">
+                    <Textbox Name="Total_Cambiado">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Tipo_Usuario.Value</Value>
+                              <Value>=Fields!Total_Cambiado.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -278,7 +278,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Tipo_Usuario</rd:DefaultName>
+                      <rd:DefaultName>Total_Cambiado</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -410,10 +410,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Total</Value>
                               <Style>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -478,6 +477,73 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Count(Fields!CambiosId.Value)</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox11">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -485,7 +551,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Fields!UsuarioId.Value)</Value>
+                              <Value>=Sum(Fields!Total_Cambiado.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -506,7 +572,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -526,81 +591,11 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox13">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox14">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
                             <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -643,11 +638,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>Usuarios</DataSetName>
-        <Top>3.625in</Top>
-        <Left>1.125in</Left>
+        <DataSetName>Cambios</DataSetName>
+        <Top>3.375in</Top>
+        <Left>0.6875in</Left>
         <Height>1in</Height>
-        <Width>4.52084in</Width>
+        <Width>5.20832in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -658,8 +653,8 @@
         <Source>Embedded</Source>
         <Value>ID39yF0s1g</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>0.73201in</Top>
-        <Left>2.3425in</Left>
+        <Top>0.60701in</Top>
+        <Left>2.39458in</Left>
         <Height>1.78125in</Height>
         <Width>1.75125in</Width>
         <ZIndex>1</ZIndex>
@@ -717,8 +712,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>2.6591in</Top>
-        <Left>1.6875in</Left>
+        <Top>2.5341in</Top>
+        <Left>1.73958in</Left>
         <Height>0.73389in</Height>
         <Width>3.125in</Width>
         <ZIndex>2</ZIndex>
@@ -732,7 +727,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox10">
+      <Textbox Name="Textbox14">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -750,11 +745,11 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>0.2175in</Top>
-        <Left>4.09375in</Left>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>0.28in</Top>
+        <Left>4.31375in</Left>
         <Height>0.25in</Height>
-        <Width>1.55208in</Width>
+        <Width>1.58208in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -767,10 +762,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>4.8125in</Height>
+    <Height>4.51042in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.60417in</Width>
   <Page>
     <PageFooter>
       <Height>1in</Height>
@@ -796,10 +791,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.42583in</Top>
-          <Left>4.09375in</Left>
+          <Top>0.48833in</Top>
+          <Left>4.31375in</Left>
           <Height>0.25in</Height>
-          <Width>1.55208in</Width>
+          <Width>1.58208in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -830,31 +825,27 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>840ae0f1-910c-4937-a867-51e6c5902ba6</rd:DataSourceID>
+      <rd:DataSourceID>3d154d70-bf0d-4af6-9122-92792917b755</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Usuarios">
+    <DataSet Name="Cambios">
       <Query>
         <DataSourceName>CDCDataset</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="UsuarioId">
-          <DataField>UsuarioId</DataField>
+        <Field Name="CambiosId">
+          <DataField>CambiosId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Username">
-          <DataField>Username</DataField>
+        <Field Name="Nombre_Persona">
+          <DataField>Nombre_Persona</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Password">
-          <DataField>Password</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tipo_Usuario">
-          <DataField>Tipo_Usuario</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Total_Cambiado">
+          <DataField>Total_Cambiado</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Fecha">
           <DataField>Fecha</DataField>
@@ -864,10 +855,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>CDCDataset</rd:DataSetName>
         <rd:SchemaPath>C:\Users\juane\source\repos\ProyectoFinal-AP2\CasaDeCambio\CDCDataset.xsd</rd:SchemaPath>
-        <rd:TableName>Usuarios</rd:TableName>
+        <rd:TableName>Cambios</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>UsuariosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CambiosTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -908,5 +899,5 @@ xN2QV0LdkjO4vbN7ild7joy0s6Nrk+uwzNWVdP8A29rc52ZO/i/+rmkxlx83nE7H/wAHFd9XLrBcPeBU
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>638848f4-4aab-46b7-ac39-28ba5307b38c</rd:ReportID>
+  <rd:ReportID>fb0cb532-8dcb-4943-9389-b7fc72254a50</rd:ReportID>
 </Report>
