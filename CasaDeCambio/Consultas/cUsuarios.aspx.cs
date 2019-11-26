@@ -1,6 +1,7 @@
 ﻿using BLL;
 using CasaDeCambio.Utilitarios;
 using Entidades;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,6 @@ namespace CasaDeCambio.Consultas
                 HastaFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
-
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
             Expression<Func<Usuarios, bool>> filtros = x => true;

@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="Consulta de Usuarios" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="cUsuarios.aspx.cs" Inherits="CasaDeCambio.Consultas.cUsuarios" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-<div class="panel panel-primary">
-      <div class="panel-heading" style="font-size: 20px; color: black; padding:15px; background-color:burlywood">CONSULTA DE USUARIOS</div><br />
+    <div class="panel panel-primary">
+      <div class="panel-heading" style="font-size: 20px; color: black; padding:15px; background-color:burlywood">CONSULTA DE USUARIOS</div>
+        <br />
         <div class="panel-body">
             <div class="form-group row">
                 <label for="Desde" class="col-sm-1 col-form-label">Desde</label>
@@ -45,7 +47,7 @@
                     <RowStyle BackColor="#EFF3FB" />
     </asp:GridView>
      <div class="col-md-6">
-         <asp:Button ID="ImprimirButton" runat="server" Class="btn btn-warning input-sm" Text="Imprimir" style="color:white"/>
+              <button type="button" class="btn btn-warning">Imprimir</button>
      </div>
     </div>
 </asp:Content>

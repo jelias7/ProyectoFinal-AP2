@@ -1,6 +1,7 @@
 ﻿using BLL;
 using CasaDeCambio.Utilitarios;
 using Entidades;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace CasaDeCambio.Consultas
 {
     public partial class cEntrada : System.Web.UI.Page
     {
+        List<EntradaMonedas> lista = new List<EntradaMonedas>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -26,7 +28,6 @@ namespace CasaDeCambio.Consultas
         {
             Expression<Func<EntradaMonedas, bool>> filtros = x => true;
             RepositorioBase<EntradaMonedas> repositorio = new RepositorioBase<EntradaMonedas>();
-            List<EntradaMonedas> lista = new List<EntradaMonedas>();
             
             DateTime Desde = Utils.ToDateTime(DesdeFecha.Text);
             DateTime Hasta = Utils.ToDateTime(HastaFecha.Text);
@@ -54,5 +55,6 @@ namespace CasaDeCambio.Consultas
             Grid.DataSource = lista;
             Grid.DataBind();
         }
+
     }
 }

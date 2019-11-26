@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Consulta de Entrada de Moneda" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="cEntrada.aspx.cs" Inherits="CasaDeCambio.Consultas.cEntrada" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
@@ -44,7 +45,8 @@
                     <RowStyle BackColor="#EFF3FB" />
     </asp:GridView>
      <div class="col-md-6">
-         <asp:Button ID="ImprimirButton" runat="server" Class="btn btn-warning input-sm" Text="Imprimir" style="color:white"/>
-     </div>
+     <button type="button" class="btn btn-warning">Imprimir</button>
     </div>
+    </div>
+               
 </asp:Content>
