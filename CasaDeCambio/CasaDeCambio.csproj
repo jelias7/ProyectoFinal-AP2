@@ -240,6 +240,17 @@
     <Content Include="Login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Login\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="CDCDataset.xsc">
+      <DependentUpon>CDCDataset.xsd</DependentUpon>
+    </Content>
+    <None Include="CDCDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CDCDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CDCDataset.xss">
+      <DependentUpon>CDCDataset.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -259,6 +270,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDCDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDCDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cEntrada.aspx.cs">
       <DependentUpon>cEntrada.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -381,6 +397,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\ListadoDivisas.rdlc" />
+    <EmbeddedResource Include="Reportes\ListadoEntrada.rdlc" />
+    <EmbeddedResource Include="Reportes\ListadoUsuarios.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -44,5 +44,8 @@
                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <RowStyle BackColor="#EFF3FB" />
     </asp:GridView>
+     <div class="col-md-6">
+         <asp:Button ID="ImprimirButton" runat="server" Class="btn btn-warning input-sm" Text="Imprimir" style="color:white"/>
+     </div>
     </div>
 </asp:Content>
