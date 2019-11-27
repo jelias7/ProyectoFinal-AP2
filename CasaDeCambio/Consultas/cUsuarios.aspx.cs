@@ -26,7 +26,9 @@ namespace CasaDeCambio.Consultas
         {
             MyViewer.LocalReport.Refresh();
             MyViewer.ProcessingMode = ProcessingMode.Local;
+            MyViewer.Reset();
             MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoUsuarios.rdlc");
+            MyViewer.LocalReport.DataSources.Clear();
             MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Usuarios", List));
             MyViewer.LocalReport.Refresh();
         }

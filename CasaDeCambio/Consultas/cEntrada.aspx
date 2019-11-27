@@ -41,10 +41,10 @@
         </div>
     <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="false" ShowHeaderWhenEmpty="True" DataKeyNames="EntradaId" CellPadding="4" ForeColor="Black" GridLines="None">
          <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID" /><asp:BoundField />
+                        <asp:BoundField DataField="EntradaId" HeaderText="ID" /><asp:BoundField />
                         <asp:BoundField DataField="DivisaId" HeaderText="ID de Divisa" /><asp:BoundField />
                         <asp:BoundField DataField="Existencia" HeaderText="Existencia" /><asp:BoundField />
-                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:d}" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" /><asp:BoundField />
 
                     </Columns>                  
         

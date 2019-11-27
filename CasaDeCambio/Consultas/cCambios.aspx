@@ -45,7 +45,7 @@
                         <asp:BoundField DataField="CambiosId" HeaderText="ID" />
                         <asp:BoundField DataField="Nombre_Persona" HeaderText="Persona" />
                         <asp:BoundField DataField="Total_Cambiado" HeaderText="Total Cambiado" />
-                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:d}" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" /><asp:BoundField />
 
                     </Columns>                
         <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>

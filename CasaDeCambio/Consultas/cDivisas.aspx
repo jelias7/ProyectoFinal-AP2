@@ -49,7 +49,7 @@
                         <asp:BoundField DataField="Existencia" HeaderText="Existencia" /><asp:BoundField />
                         <asp:BoundField DataField="Tasa_Compra" HeaderText="Tasa Compra" /><asp:BoundField />
                         <asp:BoundField DataField="Tasa_Venta" HeaderText="Tasa Venta" /><asp:BoundField />
-                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:d}" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" /><asp:BoundField />
 
                     </Columns>                 
         <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>

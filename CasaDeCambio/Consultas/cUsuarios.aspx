@@ -46,7 +46,7 @@
                         <asp:BoundField DataField="UsuarioId" HeaderText="ID" /><asp:BoundField />
                         <asp:BoundField DataField="Username" HeaderText="Usuario" /><asp:BoundField />
                         <asp:BoundField DataField="Tipo_Usuario" HeaderText="Tipo de Usuario" /><asp:BoundField />
-                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:d}" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" /><asp:BoundField />
 
                     </Columns>                  
         <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>

@@ -57,7 +57,7 @@
                     <Columns>
                         <asp:BoundField DataField="De" HeaderText="Dinero" /><asp:BoundField />
                         <asp:BoundField DataField="A" HeaderText="Cambio" /><asp:BoundField />
-                        <asp:BoundField DataField="Fecha" HeaderText="Fecha de cambio" DataFormatString="{0:d}" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha de cambio" DataFormatString="{0:dd/MM/yyyy}" /><asp:BoundField />
 
                     </Columns>     
                     <EmptyDataTemplate><div style="text-align:center">No hay datos en la tabla.</div></EmptyDataTemplate>
@@ -95,12 +95,13 @@
      <div class="panel-footer">
      <div class="text-center">
         <div class="form-group" style="display: inline-block">
-
-              <asp:Button Text="Nuevo" class="btn btn-warning btn-offset-lg" CausesValidation="false" style="color:#fff" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click" />
-              <asp:Button Text="Guardar" class="btn btn-success btn-offset-lg" runat="server" ID="GuardarButton" OnClick="GuardarButton_Click"/>
-               <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg">Imprimir</button>
-              <asp:Button Text="Eliminar" class="btn btn-danger btn-offset-lg" CausesValidation="false" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
+            <div class="col-md-12">
+              <asp:Button Text="Nuevo" class="btn btn-warning btn-lg" CausesValidation="false" style="color:#fff" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click" />
+              <asp:Button Text="Guardar" class="btn btn-success btn-lg" runat="server" ID="GuardarButton" OnClick="GuardarButton_Click"/>
+               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg">Imprimir</button>
+              <asp:Button Text="Eliminar" class="btn btn-danger btn-lg" CausesValidation="false" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
         </div>
+            </div>
        </div>
           <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                <div class="modal-dialog" style="max-width: 900px!important; min-width: 600px!important;max-height:800px!important; min-height:500px!important">
