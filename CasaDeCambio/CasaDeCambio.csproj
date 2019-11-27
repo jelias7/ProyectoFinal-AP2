@@ -160,6 +160,13 @@
     <Content Include="CDCDataset.xss">
       <DependentUpon>CDCDataset.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\cdcrosario - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cdcrosario - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cdcrosario - ReadOnly - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\cdcrosario - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\proyectocdc - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\proyectocdc - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\proyectocdc - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -322,11 +329,21 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\ListadoCambios.rdlc" />
-    <EmbeddedResource Include="Reportes\ListadoDivisas.rdlc" />
-    <EmbeddedResource Include="Reportes\ListadoEntrada.rdlc" />
-    <EmbeddedResource Include="Reportes\ListadoRecibo.rdlc" />
-    <EmbeddedResource Include="Reportes\ListadoUsuarios.rdlc" />
+    <Content Include="Reportes\ListadoCambios.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\ListadoDivisas.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\ListadoEntrada.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\ListadoRecibo.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\ListadoUsuarios.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
