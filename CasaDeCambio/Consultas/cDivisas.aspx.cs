@@ -24,6 +24,7 @@ namespace CasaDeCambio.Consultas
         }
         private void Reporte(List<Divisas> List)
         {
+            MyViewer.LocalReport.Refresh();
             MyViewer.ProcessingMode = ProcessingMode.Local;
             MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoDivisas.rdlc");
             MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Divisas", List));

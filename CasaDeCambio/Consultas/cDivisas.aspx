@@ -49,7 +49,7 @@
                     <RowStyle BackColor="#EFF3FB" />
     </asp:GridView>
      <div class="col-md-6">
-         <asp:Button ID="ImprimirButton" runat="server" Class="btn btn-warning input-sm" Text="Imprimir" data-toggle="modal" data-target=".bd-example-modal-lg"/>
+         <Button ID="ImprimirButton" Class="btn btn-warning input-sm" data-toggle="modal" data-target=".bd-example-modal-lg"/>Imprimir</Button>
           <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                <div class="modal-dialog" style="max-width: 900px!important; min-width: 600px!important;max-height:800px!important; min-height:500px!important">
                     <div class="modal-content">

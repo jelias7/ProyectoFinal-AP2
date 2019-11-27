@@ -24,6 +24,7 @@ namespace CasaDeCambio.Consultas
         }
         private void Reporte(List<Cambios> List)
         {
+            MyViewer.LocalReport.Refresh();
             MyViewer.ProcessingMode = ProcessingMode.Local;
             MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoCambios.rdlc");
             MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Cambios", List));

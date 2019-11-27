@@ -65,9 +65,9 @@ namespace CasaDeCambio.Consultas
             {
                 lista = repositorio.GetList(filtros);
             }
+            Reporte(lista);
             Grid.DataSource = lista;
             Grid.DataBind();
-            Reporte(lista);
         }
     }
 }
