@@ -86,9 +86,9 @@ namespace CasaDeCambio.Registros
         {
             Cambios c = new Cambios();
 
-            var ItemCambios = new List<string>() { PersonaTextBox.Text };
             RepositorioBase<Cambios> rep = new RepositorioBase<Cambios>();
             c = (Cambios)ViewState["Cambios"];
+
 
             Divisas D = new RepositorioBase<Divisas>().Buscar(Utils.ToInt(CualDivisaDropDown.SelectedValue));
             decimal Tasa = 0;
@@ -107,7 +107,6 @@ namespace CasaDeCambio.Registros
 
             this.BindGrid();
 
-
             DineroTextBox.Text = string.Empty;
 
             decimal Total = 0;
@@ -120,8 +119,7 @@ namespace CasaDeCambio.Registros
             MyViewer.LocalReport.Refresh();
             MyViewer.ProcessingMode = ProcessingMode.Local;
             MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoRecibo.rdlc");
-            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Recibo", c.Detalle));
-            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Recibo", ItemCambios));
+            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Recibo", c));
             MyViewer.LocalReport.Refresh();
         }
 
