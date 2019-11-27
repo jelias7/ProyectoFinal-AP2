@@ -325,6 +325,7 @@
     <EmbeddedResource Include="Reportes\ListadoCambios.rdlc" />
     <EmbeddedResource Include="Reportes\ListadoDivisas.rdlc" />
     <EmbeddedResource Include="Reportes\ListadoEntrada.rdlc" />
+    <EmbeddedResource Include="Reportes\ListadoRecibo.rdlc" />
     <EmbeddedResource Include="Reportes\ListadoUsuarios.rdlc" />
   </ItemGroup>
   <PropertyGroup>

@@ -317,6 +317,28 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReciboTableAdapter" GeneratorDataComponentClassName="ReciboTableAdapter" Name="Recibo" UserDataComponentName="ReciboTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConStr (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Cambios.CambiosId, Cambios.Nombre_Persona, Cambios.Fecha, CambiosDetalles.De, CambiosDetalles.A
+FROM            Cambios INNER JOIN
+                         CambiosDetalles ON Cambios.CambiosId = CambiosDetalles.Cambios_CambiosId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CambiosId" DataSetColumn="CambiosId" />
+              <Mapping SourceColumn="Nombre_Persona" DataSetColumn="Nombre_Persona" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="De" DataSetColumn="De" />
+              <Mapping SourceColumn="A" DataSetColumn="A" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -325,7 +347,7 @@
   <xs:element name="CDCDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CDCDataset" msprop:Generator_UserDSName="CDCDataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent" msprop:Generator_RowClassName="__MigrationHistoryRow">
+        <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_RowClassName="__MigrationHistoryRow" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MigrationId" msprop:Generator_ColumnVarNameInTable="columnMigrationId" msprop:Generator_ColumnPropNameInRow="MigrationId" msprop:Generator_ColumnPropNameInTable="MigrationIdColumn" msprop:Generator_UserColumnName="MigrationId">
@@ -353,7 +375,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Cambios" msprop:Generator_TableClassName="CambiosDataTable" msprop:Generator_TableVarName="tableCambios" msprop:Generator_TablePropName="Cambios" msprop:Generator_RowDeletingName="CambiosRowDeleting" msprop:Generator_RowChangingName="CambiosRowChanging" msprop:Generator_RowEvHandlerName="CambiosRowChangeEventHandler" msprop:Generator_RowDeletedName="CambiosRowDeleted" msprop:Generator_UserTableName="Cambios" msprop:Generator_RowChangedName="CambiosRowChanged" msprop:Generator_RowEvArgName="CambiosRowChangeEvent" msprop:Generator_RowClassName="CambiosRow">
+        <xs:element name="Cambios" msprop:Generator_TableClassName="CambiosDataTable" msprop:Generator_TableVarName="tableCambios" msprop:Generator_RowChangedName="CambiosRowChanged" msprop:Generator_TablePropName="Cambios" msprop:Generator_RowDeletingName="CambiosRowDeleting" msprop:Generator_RowChangingName="CambiosRowChanging" msprop:Generator_RowEvHandlerName="CambiosRowChangeEventHandler" msprop:Generator_RowDeletedName="CambiosRowDeleted" msprop:Generator_RowClassName="CambiosRow" msprop:Generator_UserTableName="Cambios" msprop:Generator_RowEvArgName="CambiosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CambiosId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCambiosId" msprop:Generator_ColumnPropNameInRow="CambiosId" msprop:Generator_ColumnPropNameInTable="CambiosIdColumn" msprop:Generator_UserColumnName="CambiosId" type="xs:int" />
@@ -369,7 +391,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CambiosDetalles" msprop:Generator_TableClassName="CambiosDetallesDataTable" msprop:Generator_TableVarName="tableCambiosDetalles" msprop:Generator_TablePropName="CambiosDetalles" msprop:Generator_RowDeletingName="CambiosDetallesRowDeleting" msprop:Generator_RowChangingName="CambiosDetallesRowChanging" msprop:Generator_RowEvHandlerName="CambiosDetallesRowChangeEventHandler" msprop:Generator_RowDeletedName="CambiosDetallesRowDeleted" msprop:Generator_UserTableName="CambiosDetalles" msprop:Generator_RowChangedName="CambiosDetallesRowChanged" msprop:Generator_RowEvArgName="CambiosDetallesRowChangeEvent" msprop:Generator_RowClassName="CambiosDetallesRow">
+        <xs:element name="CambiosDetalles" msprop:Generator_TableClassName="CambiosDetallesDataTable" msprop:Generator_TableVarName="tableCambiosDetalles" msprop:Generator_RowChangedName="CambiosDetallesRowChanged" msprop:Generator_TablePropName="CambiosDetalles" msprop:Generator_RowDeletingName="CambiosDetallesRowDeleting" msprop:Generator_RowChangingName="CambiosDetallesRowChanging" msprop:Generator_RowEvHandlerName="CambiosDetallesRowChangeEventHandler" msprop:Generator_RowDeletedName="CambiosDetallesRowDeleted" msprop:Generator_RowClassName="CambiosDetallesRow" msprop:Generator_UserTableName="CambiosDetalles" msprop:Generator_RowEvArgName="CambiosDetallesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DetalleId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDetalleId" msprop:Generator_ColumnPropNameInRow="DetalleId" msprop:Generator_ColumnPropNameInTable="DetalleIdColumn" msprop:Generator_UserColumnName="DetalleId" type="xs:int" />
@@ -382,7 +404,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Divisas" msprop:Generator_TableClassName="DivisasDataTable" msprop:Generator_TableVarName="tableDivisas" msprop:Generator_TablePropName="Divisas" msprop:Generator_RowDeletingName="DivisasRowDeleting" msprop:Generator_RowChangingName="DivisasRowChanging" msprop:Generator_RowEvHandlerName="DivisasRowChangeEventHandler" msprop:Generator_RowDeletedName="DivisasRowDeleted" msprop:Generator_UserTableName="Divisas" msprop:Generator_RowChangedName="DivisasRowChanged" msprop:Generator_RowEvArgName="DivisasRowChangeEvent" msprop:Generator_RowClassName="DivisasRow">
+        <xs:element name="Divisas" msprop:Generator_TableClassName="DivisasDataTable" msprop:Generator_TableVarName="tableDivisas" msprop:Generator_RowChangedName="DivisasRowChanged" msprop:Generator_TablePropName="Divisas" msprop:Generator_RowDeletingName="DivisasRowDeleting" msprop:Generator_RowChangingName="DivisasRowChanging" msprop:Generator_RowEvHandlerName="DivisasRowChangeEventHandler" msprop:Generator_RowDeletedName="DivisasRowDeleted" msprop:Generator_RowClassName="DivisasRow" msprop:Generator_UserTableName="Divisas" msprop:Generator_RowEvArgName="DivisasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DivisaId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDivisaId" msprop:Generator_ColumnPropNameInRow="DivisaId" msprop:Generator_ColumnPropNameInTable="DivisaIdColumn" msprop:Generator_UserColumnName="DivisaId" type="xs:int" />
@@ -400,7 +422,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EntradaMonedas" msprop:Generator_TableClassName="EntradaMonedasDataTable" msprop:Generator_TableVarName="tableEntradaMonedas" msprop:Generator_TablePropName="EntradaMonedas" msprop:Generator_RowDeletingName="EntradaMonedasRowDeleting" msprop:Generator_RowChangingName="EntradaMonedasRowChanging" msprop:Generator_RowEvHandlerName="EntradaMonedasRowChangeEventHandler" msprop:Generator_RowDeletedName="EntradaMonedasRowDeleted" msprop:Generator_UserTableName="EntradaMonedas" msprop:Generator_RowChangedName="EntradaMonedasRowChanged" msprop:Generator_RowEvArgName="EntradaMonedasRowChangeEvent" msprop:Generator_RowClassName="EntradaMonedasRow">
+        <xs:element name="EntradaMonedas" msprop:Generator_TableClassName="EntradaMonedasDataTable" msprop:Generator_TableVarName="tableEntradaMonedas" msprop:Generator_RowChangedName="EntradaMonedasRowChanged" msprop:Generator_TablePropName="EntradaMonedas" msprop:Generator_RowDeletingName="EntradaMonedasRowDeleting" msprop:Generator_RowChangingName="EntradaMonedasRowChanging" msprop:Generator_RowEvHandlerName="EntradaMonedasRowChangeEventHandler" msprop:Generator_RowDeletedName="EntradaMonedasRowDeleted" msprop:Generator_RowClassName="EntradaMonedasRow" msprop:Generator_UserTableName="EntradaMonedas" msprop:Generator_RowEvArgName="EntradaMonedasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EntradaId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEntradaId" msprop:Generator_ColumnPropNameInRow="EntradaId" msprop:Generator_ColumnPropNameInTable="EntradaIdColumn" msprop:Generator_UserColumnName="EntradaId" type="xs:int" />
@@ -410,7 +432,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_RowClassName="UsuariosRow" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UsuarioId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUsuarioId" msprop:Generator_ColumnPropNameInRow="UsuarioId" msprop:Generator_ColumnPropNameInTable="UsuarioIdColumn" msprop:Generator_UserColumnName="UsuarioId" type="xs:int" />
@@ -436,6 +458,23 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Recibo" msprop:Generator_TableClassName="ReciboDataTable" msprop:Generator_TableVarName="tableRecibo" msprop:Generator_TablePropName="Recibo" msprop:Generator_RowDeletingName="ReciboRowDeleting" msprop:Generator_RowChangingName="ReciboRowChanging" msprop:Generator_RowEvHandlerName="ReciboRowChangeEventHandler" msprop:Generator_RowDeletedName="ReciboRowDeleted" msprop:Generator_UserTableName="Recibo" msprop:Generator_RowChangedName="ReciboRowChanged" msprop:Generator_RowEvArgName="ReciboRowChangeEvent" msprop:Generator_RowClassName="ReciboRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CambiosId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCambiosId" msprop:Generator_ColumnPropNameInRow="CambiosId" msprop:Generator_ColumnPropNameInTable="CambiosIdColumn" msprop:Generator_UserColumnName="CambiosId" type="xs:int" />
+              <xs:element name="Nombre_Persona" msprop:Generator_ColumnVarNameInTable="columnNombre_Persona" msprop:Generator_ColumnPropNameInRow="Nombre_Persona" msprop:Generator_ColumnPropNameInTable="Nombre_PersonaColumn" msprop:Generator_UserColumnName="Nombre_Persona" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+              <xs:element name="De" msprop:Generator_ColumnVarNameInTable="columnDe" msprop:Generator_ColumnPropNameInRow="De" msprop:Generator_ColumnPropNameInTable="DeColumn" msprop:Generator_UserColumnName="De" type="xs:decimal" />
+              <xs:element name="A" msprop:Generator_ColumnVarNameInTable="columnA" msprop:Generator_ColumnPropNameInRow="A" msprop:Generator_ColumnPropNameInTable="AColumn" msprop:Generator_UserColumnName="A" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -466,10 +505,15 @@
       <xs:selector xpath=".//mstns:Usuarios" />
       <xs:field xpath="mstns:UsuarioId" />
     </xs:unique>
+    <xs:unique name="Recibo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Recibo" />
+      <xs:field xpath="mstns:CambiosId" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_dbo.CambiosDetalles_dbo.Cambios_Cambios_CambiosId" msdata:parent="Cambios" msdata:child="CambiosDetalles" msdata:parentkey="CambiosId" msdata:childkey="Cambios_CambiosId" msprop:Generator_UserChildTable="CambiosDetalles" msprop:Generator_ChildPropName="GetCambiosDetallesRows" msprop:Generator_UserRelationName="FK_dbo.CambiosDetalles_dbo.Cambios_Cambios_CambiosId" msprop:Generator_ParentPropName="CambiosRow" msprop:Generator_RelationVarName="_relationFK_dbo_CambiosDetalles_dbo_Cambios_Cambios_CambiosId" msprop:Generator_UserParentTable="Cambios" />
+      <msdata:Relationship name="FK_dbo.CambiosDetalles_dbo.Cambios_Cambios_CambiosId" msdata:parent="Cambios" msdata:child="CambiosDetalles" msdata:parentkey="CambiosId" msdata:childkey="Cambios_CambiosId" msprop:Generator_UserChildTable="CambiosDetalles" msprop:Generator_ChildPropName="GetCambiosDetallesRows" msprop:Generator_UserRelationName="FK_dbo.CambiosDetalles_dbo.Cambios_Cambios_CambiosId" msprop:Generator_RelationVarName="_relationFK_dbo_CambiosDetalles_dbo_Cambios_Cambios_CambiosId" msprop:Generator_UserParentTable="Cambios" msprop:Generator_ParentPropName="CambiosRow" />
+      <msdata:Relationship name="FK_dbo.CambiosDetalles_dbo.Cambios_Cambios_CambiosId1" msdata:parent="Recibo" msdata:child="CambiosDetalles" msdata:parentkey="CambiosId" msdata:childkey="Cambios_CambiosId" msprop:Generator_UserChildTable="CambiosDetalles" msprop:Generator_ChildPropName="GetCambiosDetallesRows" msprop:Generator_UserRelationName="FK_dbo.CambiosDetalles_dbo.Cambios_Cambios_CambiosId1" msprop:Generator_RelationVarName="_relationFK_dbo_CambiosDetalles_dbo_Cambios_Cambios_CambiosId1" msprop:Generator_UserParentTable="Recibo" msprop:Generator_ParentPropName="ReciboRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
