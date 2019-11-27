@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="Registro de Cambios" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="rCambios.aspx.cs" Inherits="CasaDeCambio.Registros.rCambios" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="panel panel-primary">
       <div class="panel-heading" style="font-size: 20px; color: white; padding:15px; background-color:black">CAMBIOS DE DIVISAS</div><br />
         <div class="panel-body">
@@ -96,11 +98,30 @@
 
               <asp:Button Text="Nuevo" class="btn btn-warning btn-offset-lg" CausesValidation="false" style="color:#fff" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click" />
               <asp:Button Text="Guardar" class="btn btn-success btn-offset-lg" runat="server" ID="GuardarButton" OnClick="GuardarButton_Click"/>
+               <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg">Imprimir</button>
               <asp:Button Text="Eliminar" class="btn btn-danger btn-offset-lg" CausesValidation="false" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
-
         </div>
        </div>
-
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog" style="max-width: 900px!important; min-width: 600px!important;max-height:800px!important; min-height:500px!important">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">RECIBO</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <%--Viewer--%>
+                            <rsweb:ReportViewer ID="MyViewer" runat="server" ProcessingMode="Local" Height="500px" Width="800px">
+                                <ServerReport ReportPath="" ReportServerUrl="" />
+                            </rsweb:ReportViewer>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+          </div>
  </div>
         </div>
 </asp:Content>

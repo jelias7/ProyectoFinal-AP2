@@ -41,8 +41,15 @@
                 </div>
             </div>
         </div>
-    <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="true" ShowHeaderWhenEmpty="True" DataKeyNames="UsuarioId" CellPadding="4" ForeColor="Black" GridLines="None">
-                    <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>
+    <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="false" ShowHeaderWhenEmpty="True" DataKeyNames="UsuarioId" CellPadding="4" ForeColor="Black" GridLines="None">
+         <Columns>
+                        <asp:BoundField DataField="UsuarioId" HeaderText="ID" /><asp:BoundField />
+                        <asp:BoundField DataField="Username" HeaderText="Usuario" /><asp:BoundField />
+                        <asp:BoundField DataField="Tipo_Usuario" HeaderText="Tipo de Usuario" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:d}" /><asp:BoundField />
+
+                    </Columns>                  
+        <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>
                     <AlternatingRowStyle BackColor="White" />
                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <RowStyle BackColor="#EFF3FB" />

@@ -1,6 +1,7 @@
 ﻿using BLL;
 using CasaDeCambio.Utilitarios;
 using Entidades;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace CasaDeCambio.Registros
                 BindGrid();
             }
         }
+
         private void FillDivisa()
         {
             RepositorioBase<Divisas> db = new RepositorioBase<Divisas>();
@@ -84,6 +86,8 @@ namespace CasaDeCambio.Registros
         {
             Cambios c = new Cambios();
 
+            var ItemCambios = new List<string>() { PersonaTextBox.Text };
+            RepositorioBase<Cambios> rep = new RepositorioBase<Cambios>();
             c = (Cambios)ViewState["Cambios"];
 
             Divisas D = new RepositorioBase<Divisas>().Buscar(Utils.ToInt(CualDivisaDropDown.SelectedValue));
@@ -99,10 +103,10 @@ namespace CasaDeCambio.Registros
 
             c.Detalle.Add(new CambiosDetalle(Utils.ToInt(DeDivisaDropDown.SelectedValue),Utils.ToInt(CualDivisaDropDown.SelectedValue),
                 Utils.ToDecimal(DineroTextBox.Text),Utils.ToDecimal(DineroTextBox.Text)*Tasa,Utils.ToDateTime(FechaTextBox.Text)));
-
             ViewState["Detalle"] = c.Detalle;
 
             this.BindGrid();
+
 
             DineroTextBox.Text = string.Empty;
 
@@ -112,6 +116,13 @@ namespace CasaDeCambio.Registros
                 Total += item.A;
             }
             TotalCambiadoTextBox.Text = Total.ToString();
+
+            MyViewer.LocalReport.Refresh();
+            MyViewer.ProcessingMode = ProcessingMode.Local;
+            MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoRecibo.rdlc");
+            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Recibo", c.Detalle));
+            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Recibo", ItemCambios));
+            MyViewer.LocalReport.Refresh();
         }
 
         protected void Grid_RowDeleting(object sender, GridViewDeleteEventArgs e)

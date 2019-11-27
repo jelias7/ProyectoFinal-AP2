@@ -42,8 +42,17 @@
                 </div>
             </div>
         </div>
-    <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="true" ShowHeaderWhenEmpty="True" DataKeyNames="DivisaId" CellPadding="4" ForeColor="Black" GridLines="None">
-                    <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>
+    <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="false" ShowHeaderWhenEmpty="True" DataKeyNames="DivisaId" CellPadding="4" ForeColor="Black" GridLines="None">
+                    <Columns>
+                        <asp:BoundField DataField="DivisaId" HeaderText="ID" /><asp:BoundField />
+                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" /><asp:BoundField />
+                        <asp:BoundField DataField="Existencia" HeaderText="Existencia" /><asp:BoundField />
+                        <asp:BoundField DataField="Tasa_Compra" HeaderText="Tasa Compra" /><asp:BoundField />
+                        <asp:BoundField DataField="Tasa_Venta" HeaderText="Tasa Venta" /><asp:BoundField />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:d}" /><asp:BoundField />
+
+                    </Columns>                 
+        <EmptyDataTemplate><div style="text-align:center">No hay datos.</div></EmptyDataTemplate>
                     <AlternatingRowStyle BackColor="White" />
                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <RowStyle BackColor="#EFF3FB" />
