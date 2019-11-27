@@ -22,12 +22,19 @@ namespace CasaDeCambio.Consultas
                 HastaFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
+        private void Reporte(List<Usuarios> List)
+        {
+            MyViewer.LocalReport.Refresh();
+            MyViewer.ProcessingMode = ProcessingMode.Local;
+            MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoUsuarios.rdlc");
+            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Usuarios", List));
+            MyViewer.LocalReport.Refresh();
+        }
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
             Expression<Func<Usuarios, bool>> filtros = x => true;
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
             List<Usuarios> lista = new List<Usuarios>();
-
             DateTime Desde = Utils.ToDateTime(DesdeFecha.Text);
             DateTime Hasta = Utils.ToDateTime(HastaFecha.Text);
 
@@ -60,6 +67,7 @@ namespace CasaDeCambio.Consultas
             }
             Grid.DataSource = lista;
             Grid.DataBind();
+            Reporte(lista);
         }
     }
 }

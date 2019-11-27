@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="panel panel-primary">
       <div class="panel-heading" style="font-size: 20px; color: black; padding:15px; background-color:burlywood">CONSULTA DE USUARIOS</div>
         <br />
@@ -47,7 +48,27 @@
                     <RowStyle BackColor="#EFF3FB" />
     </asp:GridView>
      <div class="col-md-6">
-              <button type="button" class="btn btn-warning">Imprimir</button>
+              <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bd-example-modal-lg">Imprimir</button>
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog" style="max-width: 900px!important; min-width: 600px!important;max-height:800px!important; min-height:500px!important">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">REPORTE USUARIOS</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <%--Viewer--%>
+                            <rsweb:ReportViewer ID="MyViewer" runat="server" ProcessingMode="Local" Height="500px" Width="800px">
+                                <ServerReport ReportPath="" ReportServerUrl="" />
+                            </rsweb:ReportViewer>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+          </div>
      </div>
     </div>
 </asp:Content>

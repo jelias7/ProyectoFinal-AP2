@@ -500,7 +500,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Usuarios</DataSetName>
-        <Top>3.625in</Top>
+        <Top>3.875in</Top>
         <Left>1.125in</Left>
         <Height>0.75in</Height>
         <Width>4.52084in</Width>
@@ -612,6 +612,41 @@
         <Height>0.25in</Height>
         <Width>1.55208in</Width>
         <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LISTADO DE USUARIOS</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>3.46243in</Top>
+        <Left>1.6875in</Left>
+        <Height>0.25in</Height>
+        <Width>3.125in</Width>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

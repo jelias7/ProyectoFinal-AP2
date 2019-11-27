@@ -13,6 +13,15 @@ namespace CasaDeCambio.Consultas {
     public partial class cCambios {
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// DesdeFecha control.
         /// </summary>
         /// <remarks>
@@ -74,5 +83,14 @@ namespace CasaDeCambio.Consultas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ImprimirButton;
+        
+        /// <summary>
+        /// MyViewer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.Reporting.WebForms.ReportViewer MyViewer;
     }
 }

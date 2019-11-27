@@ -499,7 +499,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Cambios</DataSetName>
-        <Top>3.375in</Top>
+        <Top>3.75in</Top>
         <Left>0.6875in</Left>
         <Height>0.75in</Height>
         <Width>5.20832in</Width>
@@ -621,8 +621,43 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LISTADO DE CAMBIOS</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>3.43056in</Top>
+        <Left>1.73958in</Left>
+        <Height>0.25in</Height>
+        <Width>3.125in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>4.51042in</Height>
+    <Height>4.6875in</Height>
     <Style />
   </Body>
   <Width>6.60417in</Width>

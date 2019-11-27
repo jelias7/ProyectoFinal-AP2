@@ -21,6 +21,7 @@ namespace CasaDeCambio.Login
         void MostrarMensaje(string mensaje)
         {
             Mensaje.Text = mensaje;
+            Mensaje.CssClass = "alert alert-danger";
         }
         protected void EntrarButton_Click(object sender, EventArgs e)
         {

@@ -1,6 +1,7 @@
 ﻿using BLL;
 using CasaDeCambio.Utilitarios;
 using Entidades;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,13 @@ namespace CasaDeCambio.Consultas
                 HastaFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
-
+        private void Reporte(List<Cambios> List)
+        {
+            MyViewer.ProcessingMode = ProcessingMode.Local;
+            MyViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoCambios.rdlc");
+            MyViewer.LocalReport.DataSources.Add(new ReportDataSource("Cambios", List));
+            MyViewer.LocalReport.Refresh();
+        }
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
             Expression<Func<Cambios, bool>> filtros = x => true;
@@ -55,6 +62,7 @@ namespace CasaDeCambio.Consultas
             {
                 lista = repositorio.GetList(filtros);
             }
+            Reporte(lista);
             Grid.DataSource = lista;
             Grid.DataBind();
         }
